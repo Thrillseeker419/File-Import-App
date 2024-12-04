@@ -1,4 +1,4 @@
-```markdown
+
 # **File-Import-App**
 
 This full-stack application allows healthcare providers to import discharge documents, review and edit the extracted data, and manage these records efficiently. The system supports data validation, enrichment, and auditing to ensure data integrity and compliance.
@@ -136,4 +136,4 @@ For a guided tutorial on using the application, watch the video in this director
 ## **License**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-```
+
