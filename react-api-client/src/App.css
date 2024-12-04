@@ -1,0 +1,621 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container for centering content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+nav {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 10px 20px;
+  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Skip Navigation Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Table Container for Horizontal Scrolling */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 1rem;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+}
+
+th {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+td {
+  background-color: #fafafa;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Form Styles */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form section {
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form input[type="file"] {
+  padding: 10px;
+}
+
+/* Action Buttons Layout */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.action-buttons button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-buttons button[type="submit"]:hover,
+.action-buttons button[type="submit"]:focus {
+  background-color: #218838;
+}
+
+.action-buttons button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+.action-buttons button[type="button"]:hover,
+.action-buttons button[type="button"]:focus {
+  background-color: #5a6268;
+}
+
+/* Form & Button Styles */
+button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover,
+button:focus {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004080;
+}
+
+button.outlined {
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button.outlined:hover,
+button.outlined:focus {
+  background-color: black;
+  color: white;
+}
+
+/* Edit Button Styles */
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover,
+.edit-btn:focus {
+  background-color: #218838;
+}
+
+/* Approve Button Styles */
+button[aria-label^="Approve"] {
+  background-color: #17a2b8;
+}
+
+button[aria-label^="Approve"]:hover,
+button[aria-label^="Approve"]:focus {
+  background-color: #138496;
+}
+
+/* Reject Button Styles */
+button[aria-label^="Reject"] {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+button[aria-label^="Reject"]:hover,
+button[aria-label^="Reject"]:focus {
+  background-color: #e0a800;
+}
+
+/* Delete Button Styles */
+button[aria-label^="Delete"] {
+  background-color: #dc3545;
+}
+
+button[aria-label^="Delete"]:hover,
+button[aria-label^="Delete"]:focus {
+  background-color: #c82333;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 10px;
+}
+
+/* Miscellaneous Styles */
+h1, h2, h3, h4 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px; /* Ensure it matches the component's error message font size */
+  margin-top: 10px;
+}
+
+/* Success message styling */
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Section Styles for Discharges */
+.discharge-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.discharge-header {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.discharge-info {
+  margin-bottom: 10px;
+}
+
+.discharge-info p {
+  margin: 5px 0;
+}
+
+.discharge-info strong {
+  font-weight: bold;
+}
+
+/* Enrichment Table Styles */
+.enrichment-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enrichment-table, th, td {
+  border: 1px solid #ddd;
+}
+
+.enrichment-table th, .enrichment-table td {
+  padding: 12px 20px;
+  text-align: left;
+}
+
+.enrichment-table th {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.enrichment-table td {
+  background-color: #fafafa;
+}
+
+.enrichment-table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.enrichment-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.enrichment-table td, .enrichment-table th {
+  padding: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    padding: 12px 20px;
+  }
+
+  /* Make table containers scrollable */
+  .table-container {
+    overflow-x: auto;
+  }
+
+  /* Stack discharge info on small screens */
+  .discharge-info p {
+    font-size: 14px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+  /* Responsive Typography and Spacing */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .discharge-section {
+    padding: 15px;
+  }
+
+  /* Responsive Modal */
+  .confirm-modal {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .modal-actions button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Ensure that select dropdowns are full width on small screens */
+  select {
+    width: 100%;
+  }
+}
+
+/* Confirm Modal Styles */
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Initially hidden */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirm-modal-overlay.visible {
+  display: flex; /* Show when needed */
+}
+
+.confirm-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%; /* Adjust width for smaller screens */
+  text-align: center;
+  z-index: 1001;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  outline: none; /* Remove default outline */
+}
+
+.confirm-modal:focus {
+  outline: 2px solid #007bff; /* Custom focus outline */
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal-actions button:first-child {
+  background-color: #dc3545; /* Red for Cancel */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:first-child:hover,
+.modal-actions button:first-child:focus {
+  background-color: #c82333;
+}
+
+.modal-actions button:last-child {
+  background-color: #28a745; /* Green for Confirm */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:last-child:hover,
+.modal-actions button:last-child:focus {
+  background-color: #218838;
+}
+
+/* Validation Error Styles */
+/* Highlight inputs/selects with aria-invalid="true" */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: red;
+}
+
+/* Highlight inputs/selects with aria-invalid="false" */
+input[aria-invalid="false"],
+select[aria-invalid="false"],
+textarea[aria-invalid="false"] {
+  border-color: green;
+}
+
+/* Ensure that valid inputs have green borders and invalid have red borders */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+/* Optional: Add focus styles for better accessibility */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Additional Styles for --select-- Option */
+select option[value="--select--"] {
+  color: #6c757d; /* Gray color for placeholder option */
+}
+
+select option[value="--select--"]:disabled {
+  display: none; /* Hide the --select-- option when the select is invalid */
+}
+
+select option:disabled {
+  color: #6c757d;
+}
+
+/* Responsive Enhancements for Enrichment Dropdowns */
+@media (max-width: 768px) {
+  /* Ensure that select dropdowns are full width on small screens */
+  select {
+    width: 100%;
+  }
+}
