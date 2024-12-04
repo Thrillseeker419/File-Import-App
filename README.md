@@ -1,4 +1,3 @@
-
 # **File-Import-App**
 
 This full-stack application allows healthcare providers to import discharge documents, review and edit the extracted data, and manage these records efficiently. The system supports data validation, enrichment, and auditing to ensure data integrity and compliance.
@@ -48,15 +47,18 @@ Install Python dependencies:
 pip install flask flask-cors pdfplumber psycopg[binary]
 ```
 
-Modify the database connection information inside `app.py` to match your local PostgreSQL configuration:
+Modify the database connection information inside `init_db.py` to match your local PostgreSQL configuration:
 ```python
-DB_CONFIG = {
-    "dbname": "my_database",
-    "user": "app_user",
-    "password": "securepassword",
-    "host": "localhost",
-    "port": "5432",
-}
+# Configuration
+SUPERUSER_DB = "postgres"
+SUPERUSER_USER = "postgres" # Your PostgreSQL superuser username.
+SUPERUSER_PASSWORD = "your_superuser_password"  # Ensure this matches your actual password (and don't commit a real one!)
+SUPERUSER_HOST = "localhost" # Update if PostgreSQL is hosted elsewhere.
+SUPERUSER_PORT = "5432" # Update if PostgreSQL is running on a different port.
+
+DB_NAME = "my_database" # The name of the database to create.
+DB_USER = "app_user" # The application user name.
+DB_PASSWORD = "securepassword" #The application user's password.
 ```
 
 #### **Frontend**
@@ -136,4 +138,3 @@ For a guided tutorial on using the application, watch the video in this director
 ## **License**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
