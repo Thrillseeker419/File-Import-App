@@ -4,14 +4,14 @@ import sys
 
 # Configuration
 SUPERUSER_DB = "postgres"
-SUPERUSER_USER = "postgres"
-SUPERUSER_PASSWORD = "1Tommy12341!"  # Ensure this matches your actual password (and don't commit a real one!)
-SUPERUSER_HOST = "localhost"
-SUPERUSER_PORT = "5432"
+SUPERUSER_USER = "postgres" # Your PostgreSQL superuser username.
+SUPERUSER_PASSWORD = "your_superuser_password"  # Ensure this matches your actual password (and don't commit a real one!)
+SUPERUSER_HOST = "localhost" # Update if PostgreSQL is hosted elsewhere.
+SUPERUSER_PORT = "5432" # Update if PostgreSQL is running on a different port.
 
-DB_NAME = "my_database"
-DB_USER = "app_user"
-DB_PASSWORD = "securepassword"
+DB_NAME = "my_database" # The name of the database to create.
+DB_USER = "app_user" # The application user name.
+DB_PASSWORD = "securepassword" #The application user's password.
 
 # SQL for granting permissions
 GRANT_PERMISSIONS_SQL = """
